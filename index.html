@@ -63,8 +63,29 @@
           </div>
           <div class="chat-list">
             <ul>
-              <li v-for= "(contact,name) in contacts"></li>
-              
+              <li v-for= "(contact, index) in contacts">
+
+                <div class="img-chat">
+
+                  <img :src="contact.avatar" alt="">
+
+                </div>
+                <div class="nome-text">
+
+                <strong>{{contact.name}}</strong>   <br>
+
+                  {{contact.messages[contact.messages.length - 1].text}}
+
+
+                </div>
+                <div class="dataora-chat">
+                  {{contact.messages[contact.messages.length - 1].date}}
+                </div>
+
+
+
+              </li>
+
             </ul>
 
           </div>
@@ -105,7 +126,7 @@
             </div>
             <div class="messaggio-input">
 
-              <input v-model="newMessage" type="text" placeholder="Scrivi un messaggio" name="" value="">
+              <input v-model="newMessage" @keyup.enter="sendNewMessage" type="text" placeholder="Scrivi un messaggio" name="" value="">
 
             </div>
             <div class="audio">

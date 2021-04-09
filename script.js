@@ -1,13 +1,13 @@
 function exBoolzapp(){
 
-  new Vue({
+  new Vue ({
     el: '#app',
     data:{
       contacts: [
 
         {
           name: 'Michele',
-          avatar:'_1',
+          avatar:'img/Michele.jpg',
           visible: true,
           messages: [
             {
@@ -29,8 +29,8 @@ function exBoolzapp(){
 
         },
         {
-          name: 'fabio',
-          avatar: '-2',
+          name: 'Fabio',
+          avatar: 'img/Fabio.jpg',
           visible: true,
           messages: [
             {
@@ -52,7 +52,7 @@ function exBoolzapp(){
         },
         {
           name: 'Samuele',
-          avatar: '_3',
+          avatar: 'img/samuele.png',
           visible: true,
           messages: [
             {
@@ -75,7 +75,7 @@ function exBoolzapp(){
         },
         {
           name: 'Luisa',
-          avatar: '_4',
+          avatar: 'img/luisa.jpg',
           visible: true,
           messages: [
             {
@@ -95,11 +95,13 @@ function exBoolzapp(){
     },
     methods: {
 
+      
+  }
+})
 
-  })
 }
 
-function init() {
+function init(){
 
     console.log('hello');
     exBoolzapp()

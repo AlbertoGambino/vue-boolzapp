@@ -115,10 +115,36 @@
 }
 
 .chat-list ul li{
-  height: 8%;
+  height: 75px;
   width: 100%;
   border-bottom: 1px solid gold;
   color: gold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.chat-list ul li img{
+
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+
+
+}
+.img-chat{
+  width: 20%;
+}
+
+.nome-text{
+  width: 60%
+}
+
+.dataora-chat{
+  font-size: 10px;
+  margin-right: 10px;
+  width: 20%;
 }
 
 .container-conv{

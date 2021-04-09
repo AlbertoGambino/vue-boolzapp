@@ -1,0 +1,201 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.container{
+
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  padding: 25px 0;
+}
+
+.applicazione{
+
+  width: 80%;
+  border: 1px solid gold;
+  height: 100%;
+  margin: auto;
+  display: flex;
+
+}
+
+.nav-sx{
+  border: 1px solid gold;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.profile{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gold;
+  height: 8%;
+  width: 100%;
+}
+
+
+.profile-img img{
+  margin-left: 10px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-action i{
+
+  color: gold;
+  padding: 20px;
+}
+
+.silent-img i{
+  color: gold;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.notifiche{
+  border: 1px solid gold;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.notifiche-desktop{
+
+  color: white;
+  text-align: center;
+  margin-right: 100px;
+}
+
+.notifiche-desktop i{
+  font-size: 10px;
+}
+
+.cerca{
+  height: 5%;
+  width: 100%;
+  border: 1px solid gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cerca input{
+  border-radius: 50px;
+  border: 1px solid gold;
+  background-color: white;
+  color: black;
+  width: 95%;
+  height: 75%;
+  text-align: center;
+  position: relative;
+
+}
+
+.cerca i{
+  color: black;
+  position: absolute;
+  left: 215px;
+}
+
+.chat-list{
+  height: 77%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chat-list ul li{
+  height: 8%;
+  width: 100%;
+  border-bottom: 1px solid gold;
+  color: gold;
+}
+
+.container-conv{
+  border: 1px solid gold;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dati-conv{
+  height: 8%;
+  width: 100%;
+  border: 1px solid gold;
+  display: flex;
+}
+
+.conv-attiva{
+  border: 1px solid gold;
+  width: 90%;
+  height: 100%;
+}
+.conv-search, .conv-menu{
+
+  width: 5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conv-search i, .conv-menu i{
+  color: gold;
+}
+
+.chat{
+  border: 1px solid gold;
+  width: 100%;
+  height: 84%;
+  background: url(img/chatbg.jpg)
+}
+
+.chat-input{
+  height: 8%;
+  width: 100%;
+  border: 1px solid gold;
+  display: flex;
+
+}
+.emoji, .allegati, .audio{
+  width: 5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.emoji i, .allegati i, .audio i{
+
+  color: gold;
+}
+
+.messaggio-input{
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.messaggio-input input{
+  border-radius: 50px;
+  padding-left: 20px;
+  background-color: white;
+  color: black;
+  width: 95%;
+  height: 75%;
+  position: relative;
+}

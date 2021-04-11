@@ -91,11 +91,17 @@ function exBoolzapp(){
           ],
         },
       ],
-      newMessage: ''
+      newMessage: '',
+      newAnswer:'',
+      activeContact: false
     },
     methods: {
-
-      
+      getContact: function(index){
+        this.activeContact = this.contacts[index]
+      },
+      // sendNewMessage:function(){
+      //
+      // }
   }
 })
 

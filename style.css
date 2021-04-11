@@ -166,7 +166,27 @@
   border: 1px solid gold;
   width: 90%;
   height: 100%;
+
 }
+
+.conv-attiva img{
+
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+}
+
+.conv-attiva span{
+  color: gold;
+  padding: 10px;
+  position: relative;
+  bottom: 12px;
+  font-size: 20px;
+}
+
 .conv-search, .conv-menu{
 
   width: 5%;
@@ -184,7 +204,38 @@
   border: 1px solid gold;
   width: 100%;
   height: 84%;
-  background: url(img/chatbg.jpg)
+  background: url(img/chatbg.jpg);
+  display: flex;
+  flex-direction: column;
+}
+
+.received{
+
+    background-color: rgba(255,255,255,0.7);
+    float: left;
+}
+.sent{
+
+    background-color: rgba(229,255,191,0.7);
+    float: right;
+}
+.received, .sent{
+
+    padding: 15px 60px 15px 15px;
+    position: relative;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+.sms-date{
+  position: absolute;
+  right: 2px;
+  bottom: 5px;
+  color: white;
+  max-width: 40px;
+  font-size: 7px;
+  color: black;
 }
 
 .chat-input{

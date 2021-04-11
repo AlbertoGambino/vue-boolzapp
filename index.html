@@ -63,7 +63,7 @@
           </div>
           <div class="chat-list">
             <ul>
-              <li v-for= "(contact, index) in contacts">
+              <li v-for= "(contact, index) in contacts" @click= "getContact(index)">
 
                 <div class="img-chat">
 
@@ -76,13 +76,10 @@
 
                   {{contact.messages[contact.messages.length - 1].text}}
 
-
                 </div>
                 <div class="dataora-chat">
                   {{contact.messages[contact.messages.length - 1].date}}
                 </div>
-
-
 
               </li>
 
@@ -96,6 +93,10 @@
           <div class="dati-conv">
 
             <div class="conv-attiva">
+
+              <img :src="activeContact.avatar" alt="">
+
+              <span><strong>{{activeContact.name}}</strong></span>
 
             </div>
             <div class="conv-search">
@@ -112,7 +113,19 @@
           </div>
           <div class="chat">
 
+            <div v-for="message in activeContact.messages" class="sms" >
+                <span :class="(message.status == 'sent') ? 'sent' : 'received'">
+
+                  {{message.text}}
+
+                  <span class="sms-date">{{message.date}}</span>
+
+                </span>
+
+            </div>
+
           </div>
+
           <div class="chat-input">
             <div class="emoji">
 

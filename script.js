@@ -104,6 +104,7 @@ function exBoolzapp(){
         status:'received',
         },
       activeContact: false,
+      textFilter: '',
     },
     methods: {
       getContact: function(index){
@@ -132,7 +133,13 @@ function exBoolzapp(){
 
         this.activeContact.messages.push({...this.answer})
 
-      }
+      },
+      filteredContacts: function(){
+
+        return this.contacts.filter(contact => {
+        return contact.name.toLowerCase().includes(this.textFilter.toLowerCase());
+      });
+    },
 
   }
 })

@@ -58,12 +58,12 @@
 
           </div>
           <div class="cerca">
-            <input type="text" name="" placeholder="Cerca o inizia una nuova chat"value="">
+            <input type="text" name="" v-model="textFilter" placeholder="Cerca o inizia una nuova chat" value="">
             <i class="fas fa-search"></i>
           </div>
           <div class="chat-list">
             <ul>
-              <li v-for= "(contact, index) in contacts" @click= "getContact(index)">
+              <li v-for= "(contact, index) in filteredContacts() " @click= "getContact(index)">
 
                 <div class="img-chat">
 

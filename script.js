@@ -91,17 +91,49 @@ function exBoolzapp(){
           ],
         },
       ],
-      newMessage: '',
-      newAnswer:'',
-      activeContact: false
+      inputText: '',
+      newMessage: {
+        date:'',
+        text:'',
+        status:'sent',
+
+      },
+      answer:{
+        date:'',
+        text:'ok',
+        status:'received',
+        },
+      activeContact: false,
     },
     methods: {
       getContact: function(index){
         this.activeContact = this.contacts[index]
       },
-      // sendNewMessage:function(){
-      //
-      // }
+      sendNewMessage:function(){
+
+        this.newMessage['text'] = this.inputText
+
+        var oggi = new Date()
+        var adesso = oggi.getDate() + '/' + oggi.getMonth() + '/' + oggi.getFullYear() + ' ' + oggi.getHours() + ':' + oggi.getMinutes() + ':' + oggi.getSeconds()
+
+        this.newMessage['date'] = adesso
+
+        this.activeContact.messages.push({...this.newMessage})
+        this.inputText = ''
+
+        setTimeout(this.answerOk, 1000)
+      },
+      answerOk: function(){
+
+        var oggi = new Date()
+        var adesso = oggi.getDate() + '/' + oggi.getMonth() + '/' + oggi.getFullYear() + ' ' + oggi.getHours() + ':' + oggi.getMinutes() + ':' + oggi.getSeconds()
+
+        this.answer['date'] = adesso
+
+        this.activeContact.messages.push({...this.answer})
+
+      }
+
   }
 })
 

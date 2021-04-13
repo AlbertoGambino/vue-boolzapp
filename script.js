@@ -103,12 +103,40 @@ function exBoolzapp(){
         text:'ok',
         status:'received',
         },
-      activeContact: false,
+      activeContact: 0,
       textFilter: '',
     },
+    computed:{
+      filteredContacts: function(){
+
+
+        // const resContacts = [];
+        // for (let i = 0; i < this.contacts.length; i++){
+        //
+        //   const contact = this.contacts[i];
+        //   const name = contact['name'];
+        //
+        //   if(name.toLowerCase().includes(this.textFilter.toLowerCase())){
+        //
+        //     resContacts.push(contact)
+        //
+        //   }
+        // }
+        //
+        // return resContacts
+        return this.contacts.filter(contact => {
+          return contact.name.toLowerCase().includes(this.textFilter.toLowerCase());
+        });
+
+      },
+    },
     methods: {
-      getContact: function(index){
-        this.activeContact = this.contacts[index]
+      getContact: function(contact){
+        this.activeContact = contact
+        // this.activeContact = index;
+
+
+
       },
       sendNewMessage:function(){
 
@@ -120,6 +148,9 @@ function exBoolzapp(){
         this.newMessage['date'] = adesso
 
         this.activeContact.messages.push({...this.newMessage})
+
+        // this.contacts[this.activeContact].messages.push({...this.newMessage})
+
         this.inputText = ''
 
         setTimeout(this.answerOk, 1000)
@@ -133,13 +164,10 @@ function exBoolzapp(){
 
         this.activeContact.messages.push({...this.answer})
 
-      },
-      filteredContacts: function(){
+        // this.contacts[this.activeContact].messages.push({...this.answer})
 
-        return this.contacts.filter(contact => {
-        return contact.name.toLowerCase().includes(this.textFilter.toLowerCase());
-      });
-    },
+      },
+
 
   }
 })

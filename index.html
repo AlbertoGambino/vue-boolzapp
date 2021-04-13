@@ -63,7 +63,7 @@
           </div>
           <div class="chat-list">
             <ul>
-              <li v-for= "(contact, index) in filteredContacts() " @click= "getContact(index)">
+              <li v-for= "(contact, index) in filteredContacts" @click= "getContact(contact)">
 
                 <div class="img-chat">
 
@@ -72,7 +72,9 @@
                 </div>
                 <div class="nome-text">
 
-                <strong>{{contact.name}}</strong>   <br>
+                <strong>{{contact.name}}</strong>
+
+                <br>
 
                   {{contact.messages[contact.messages.length - 1].text}}
 
@@ -94,7 +96,12 @@
 
             <div class="conv-attiva">
 
+              <!-- activeContact -->
+
+
               <img :src="activeContact.avatar" alt="">
+
+              <!-- <img :src="filteredContacts()[activeContact].avatar"> -->
 
               <span><strong>{{activeContact.name}}</strong></span>
 
@@ -112,6 +119,9 @@
 
           </div>
           <div class="chat">
+
+              <!-- v-for="message in filteredContacts()[activeContact].messages" -->
+
 
             <div v-for="message in activeContact.messages" class="sms" >
                 <span :class="(message.status == 'sent') ? 'sent' : 'received'">

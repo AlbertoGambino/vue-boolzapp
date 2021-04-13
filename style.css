@@ -207,6 +207,7 @@
   background: url(img/chatbg.jpg);
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .received{

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -74,7 +74,7 @@
 
   color: white;
   text-align: center;
-  margin-right: 100px;
+  margin: auto;
 }
 
 .notifiche-desktop i{
@@ -276,4 +276,31 @@
   width: 95%;
   height: 75%;
   position: relative;
+}
+
+
+
+.iniziale{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: gold;
+
+}
+
+.iniziale img{
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+}
+
+.iniziale span,{
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+
 }

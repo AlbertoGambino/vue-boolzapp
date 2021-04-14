@@ -13,6 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">    
 
     <link rel="stylesheet" href="style.css">
 
@@ -90,7 +92,17 @@
           </div>
 
         </div>
-        <div class="container-conv">
+
+        <div v-if="activeContact == false" class="iniziale">
+
+                    <h1>BOOLZAPP</h1>
+                    <span>Clicca su un contatto per iniziare a chattare</span>
+                    <img src="img/init.jpg" alt="cane">
+                    <h2>Mantieni il telefono connesso</h2>
+                    <span>Boolzapp si collega al tuo telefono per sincronizzare i messaggi. Per ridurre il consumo dati collega il telefono ad una rete Wi-Fi.</span>
+                </div>
+
+        <div v-else class="container-conv">
 
           <div class="dati-conv">
 

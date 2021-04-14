@@ -103,7 +103,7 @@ function exBoolzapp(){
         text:'ok',
         status:'received',
         },
-      activeContact: 0,
+      activeContact: false,
       textFilter: '',
     },
     computed:{

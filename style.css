@@ -8,15 +8,14 @@
 .container{
 
   height: 100vh;
-  width: 100vw;
-  background-color: black;
+  background: linear-gradient(180deg, #009688 13%, #D8DBD5 13%);
   padding: 25px 0;
 }
 
 .applicazione{
 
   width: 80%;
-  border: 1px solid gold;
+  background-color: white;
   height: 100%;
   margin: auto;
   display: flex;
@@ -24,7 +23,6 @@
 }
 
 .nav-sx{
-  border: 1px solid gold;
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -37,9 +35,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid gold;
   height: 8%;
   width: 100%;
+  background-color: #ECEEED;
 }
 
 
@@ -51,30 +49,34 @@
 
 .profile-action i{
 
-  color: gold;
+  color: grey;
   padding: 20px;
 }
 
 .silent-img i{
-  color: gold;
+  color: grey;
   font-size: 30px;
   margin-left: 10px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 50%;
 }
 
 .notifiche{
-  border: 1px solid gold;
   height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: #96DBFD;
 }
 
 .notifiche-desktop{
 
-  color: white;
+  color: grey;
   text-align: center;
   margin: auto;
+  
 }
 
 .notifiche-desktop i{
@@ -84,26 +86,26 @@
 .cerca{
   height: 5%;
   width: 100%;
-  border: 1px solid gold;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ECEEED;
 }
 
 .cerca input{
   border-radius: 50px;
-  border: 1px solid gold;
   background-color: white;
   color: black;
   width: 95%;
   height: 75%;
   text-align: center;
   position: relative;
+  border: none;
 
 }
 
 .cerca i{
-  color: black;
+  color: grey;
   position: absolute;
   left: 215px;
 }
@@ -111,14 +113,15 @@
 .chat-list{
   height: 77%;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
+  border-right: 1px solid #ECEEED;
+
 }
 
 .chat-list ul li{
   height: 75px;
   width: 100%;
-  border-bottom: 1px solid gold;
-  color: gold;
+  border-bottom: 1px solid #ECEEED;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -127,29 +130,34 @@
 .chat-list ul li img{
 
   margin-left: 10px;
-  height: 40px;
-  width: 40px;
-  border-radius: 100%;
-
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 
 }
 .img-chat{
   width: 20%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .nome-text{
-  width: 60%
+  width: 60%;
+  color: grey;
+  font-size: 0.9rem;
 }
 
 .dataora-chat{
   font-size: 10px;
   margin-right: 10px;
   width: 20%;
+  color: grey;
 }
 
 .container-conv{
-  border: 1px solid gold;
-  width: 70%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -158,12 +166,11 @@
 .dati-conv{
   height: 8%;
   width: 100%;
-  border: 1px solid gold;
   display: flex;
+  background-color: #ECEEED;
 }
 
 .conv-attiva{
-  border: 1px solid gold;
   width: 90%;
   height: 100%;
 
@@ -176,11 +183,13 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 
 }
 
 .conv-attiva span{
-  color: gold;
+  color: grey;
   padding: 10px;
   position: relative;
   bottom: 12px;
@@ -197,17 +206,18 @@
 }
 
 .conv-search i, .conv-menu i{
-  color: gold;
+  color: grey;
 }
 
 .chat{
-  border: 1px solid gold;
+  border: 1px solid #ECEEED;
   width: 100%;
   height: 84%;
   background: url(img/chatbg.jpg);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow-y: auto;
 }
 
 .received{
@@ -242,8 +252,9 @@
 .chat-input{
   height: 8%;
   width: 100%;
-  border: 1px solid gold;
+  border: 1px solid #ECEEED;
   display: flex;
+  position: relative;
 
 }
 .emoji, .allegati, .audio{
@@ -257,7 +268,9 @@
 
 .emoji i, .allegati i, .audio i{
 
-  color: gold;
+  color: grey;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .messaggio-input{
@@ -276,6 +289,12 @@
   width: 95%;
   height: 75%;
   position: relative;
+  border: 1px solid #ECEEED;
+}
+
+.messaggio-input input:focus{
+
+  outline: none;
 }
 
 
@@ -287,20 +306,57 @@
     justify-content: space-around;
     width: 100%;
     height: 100%;
-    background-color: black;
-    color: gold;
+    background-color: white;
+    color: grey;
 
 }
 
 .iniziale img{
-  border-radius: 100%;
+  border-radius: 50%;
   width: 400px;
   height: 400px;
+  object-fit: cover;
 }
 
-.iniziale span,{
+.iniziale span{
     margin: auto;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 
 }
+
+.iniziale h2{
+
+  margin-top: 30px;
+}
+
+/* --------------------------------------- */
+
+#content-emoticon{
+    width: 875px;
+    background-color: #eceeed;
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    z-index: 200;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#content-emoticon>ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 17px;
+}
+
+#content-emoticon.active{
+    display: block;
+}
+
+#content-emoticon li {
+    list-style: none;
+    padding: 0 10px 10px 0;
+    cursor: pointer;
+}
+

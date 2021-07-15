@@ -95,7 +95,6 @@
 
         <div v-if="activeContact == false" class="iniziale">
 
-                    <h1>BOOLZAPP</h1>
                     <span>Clicca su un contatto per iniziare a chattare</span>
                     <img src="img/init.jpg" alt="cane">
                     <h2>Mantieni il telefono connesso</h2>
@@ -136,9 +135,10 @@
 
 
             <div v-for="message in activeContact.messages" class="sms" >
-                <span :class="(message.status == 'sent') ? 'sent' : 'received'">
+                <span :class="(message.status == 'sent') ? 'sent' : 'received'" >
 
-                  {{message.text}}
+                  <!-- {{message.text}} -->
+                  <span v-html="message.text"></span>
 
                   <span class="sms-date">{{message.date}}</span>
 
@@ -151,7 +151,20 @@
           <div class="chat-input">
             <div class="emoji">
 
-              <i class="far fa-laugh"></i>
+              <i class="far fa-laugh" @click="clickEmoticonsMenu">
+
+                <div id="content-emoticon" :class="(emoticonDisplay) ? 'active' : '' ">
+                  
+                  <ul>
+                    <!-- v-html serve per fare vedere emoticon e non l'unicode-->
+                    <li v-for="emoji in emoticons" v-html="emoji.code" @click="clickEmoticon(emoji)" @click.stop>
+                    
+                    </li>
+
+                  </ul>
+                </div>
+
+              </i>
 
             </div>
             <div class="allegati">
@@ -161,7 +174,7 @@
             </div>
             <div class="messaggio-input">
 
-              <input v-model="inputText" @keyup.enter="sendNewMessage" type="text" placeholder="Scrivi un messaggio" name="" value="">
+              <input v-model="inputText" v-html="inputText"  @keyup.enter="sendNewMessage" type="text" placeholder="Scrivi un messaggio" ref="inputFocus">
 
             </div>
             <div class="audio">
